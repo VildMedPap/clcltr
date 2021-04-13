@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2980b9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #6dd5fa, #2980b9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #6dd5fa, #2980b9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  border: 1px solid #2d2e2e;
+  font-size: 1.25rem;
+}
+.btn:focus {
+  outline: 0;
+}
+
+.btn-operator {
+  background: #d2d2d2;
+  color: #141414;
+}
+
+.btn-input {
+  background: #e9ecef;
+  color: #141414;
+}
+
+.btn-pressed {
+  border: 3px solid #b23a48;
+}
+
+#calculator {
+  display: grid;
+  grid-template-columns: 28rem;
+  grid-template-rows: 7rem 20rem;
+  grid-template-areas: "display" "keys";
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#calculator__display {
+  grid-area: display;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: #141414;
+  color: #fbfbfb;
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.5rem;
+}
+
+#calculator__keys {
+  grid-area: keys;
+  display: grid;
+  grid-template-columns: 7rem 7rem 7rem 7rem;
+  grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
+  grid-template-areas: "add subtract multiply divide" "number__7 number__8 number__9 calculate" "number__4 number__5 number__6 calculate" "number__1 number__2 number__3 calculate" "number__0 decimal clear calculate";
+}
+
+#add {
+  grid-area: add;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#number__1 {
+  grid-area: number__1;
+}
+
+#number__2 {
+  grid-area: number__2;
+}
+
+#number__3 {
+  grid-area: number__3;
+}
+
+#number__4 {
+  grid-area: number__4;
+}
+
+#number__5 {
+  grid-area: number__5;
+}
+
+#number__6 {
+  grid-area: number__6;
+}
+
+#number__7 {
+  grid-area: number__7;
+}
+
+#number__8 {
+  grid-area: number__8;
+}
+
+#number__9 {
+  grid-area: number__9;
+}
+
+#number__0 {
+  grid-area: number__0;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#calculate {
+  grid-area: calculate;
+  background: #f8971a;
+  color: #141414;
+}
+
+/*# sourceMappingURL=main.css.map */

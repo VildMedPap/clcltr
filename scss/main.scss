@@ -1,0 +1,172 @@
+@import "_colors.scss";
+@import "_fonts.scss";
+@import "_mixins.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    @include display-flex-c2;
+    background: #2980b9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to bottom,
+        #ffffff,
+        #6dd5fa,
+        #2980b9
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #6dd5fa,
+        #2980b9
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn {
+    @include display-flex-c2;
+    font-family: inherit;
+    border: 1px solid map-get($colors, lightblack);
+    font-size: 1.25rem;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn-operator {
+    background: map-get($colors, grey);
+    color: map-get($colors, black);
+}
+
+.btn-input {
+    background: map-get($colors, lightgrey);
+    color: map-get($colors, black);
+}
+
+.btn-pressed {
+    // background: map-get($colors, lightblack);
+    // color: map-get($colors, lightgrey);
+    border: 3px solid map-get($colors, red);
+}
+
+#calculator {
+    display: grid;
+    grid: {
+        template: {
+            columns: 28rem;
+            rows: 7rem 20rem;
+            areas: "display" "keys";
+        }
+    }
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#calculator__display {
+    grid-area: display;
+
+    @include display-flex() {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    padding: 2rem;
+    background: map-get($colors, black);
+    color: map-get($colors, white);
+    font-family: "Roboto Mono", monospace;
+    font-size: 2.5rem;
+}
+
+#calculator__keys {
+    grid-area: keys;
+    display: grid;
+    grid: {
+        template: {
+            columns: 7rem 7rem 7rem 7rem;
+            rows: 4rem 4rem 4rem 4rem 4rem;
+            areas: "add subtract multiply divide"
+                "number__7 number__8 number__9 calculate"
+                "number__4 number__5 number__6 calculate"
+                "number__1 number__2 number__3 calculate"
+                "number__0 decimal clear calculate";
+        }
+    }
+}
+
+#add {
+    grid-area: add;
+}
+
+#subtract {
+    grid-area: subtract;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#number__1 {
+    grid-area: number__1;
+}
+
+#number__2 {
+    grid-area: number__2;
+}
+
+#number__3 {
+    grid-area: number__3;
+}
+
+#number__4 {
+    grid-area: number__4;
+}
+
+#number__5 {
+    grid-area: number__5;
+}
+
+#number__6 {
+    grid-area: number__6;
+}
+
+#number__7 {
+    grid-area: number__7;
+}
+
+#number__8 {
+    grid-area: number__8;
+}
+
+#number__9 {
+    grid-area: number__9;
+}
+
+#number__0 {
+    grid-area: number__0;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#clear {
+    grid-area: clear;
+}
+
+#calculate {
+    grid-area: calculate;
+    background: map-get($colors, orange);
+    color: map-get($colors, black);
+}
