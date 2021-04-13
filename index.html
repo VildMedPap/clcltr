@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="img/favicon/favicon.ico"
+        />
+        <title>clcltr</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <main class="container">
+            <div id="calculator">
+                <div id="calculator__display">0</div>
+                <div id="calculator__keys">
+                    <button class="btn btn-operator" id="add" data-action="add">
+                        +
+                    </button>
+                    <button
+                        class="btn btn-operator"
+                        id="subtract"
+                        data-action="subtract"
+                    >
+                        -
+                    </button>
+                    <button
+                        class="btn btn-operator"
+                        id="multiply"
+                        data-action="multiply"
+                    >
+                        *
+                    </button>
+                    <button
+                        class="btn btn-operator"
+                        id="divide"
+                        data-action="divide"
+                    >
+                        /
+                    </button>
+                    <button class="btn btn-input" id="number__1">1</button>
+                    <button class="btn btn-input" id="number__2">2</button>
+                    <button class="btn btn-input" id="number__3">3</button>
+                    <button class="btn btn-input" id="number__4">4</button>
+                    <button class="btn btn-input" id="number__5">5</button>
+                    <button class="btn btn-input" id="number__6">6</button>
+                    <button class="btn btn-input" id="number__7">7</button>
+                    <button class="btn btn-input" id="number__8">8</button>
+                    <button class="btn btn-input" id="number__9">9</button>
+                    <button class="btn btn-input" id="number__0">0</button>
+                    <button
+                        class="btn btn-input"
+                        id="decimal"
+                        data-action="decimal"
+                    >
+                        .
+                    </button>
+                    <button
+                        class="btn btn-input"
+                        id="clear"
+                        data-action="clear"
+                    >
+                        AC
+                    </button>
+                    <button class="btn" id="calculate" data-action="calculate">
+                        =
+                    </button>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="js/app.js"></script>
+</html>
