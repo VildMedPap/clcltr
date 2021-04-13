@@ -40,6 +40,10 @@ body {
     &:focus {
         outline: 0;
     }
+
+    @media (max-width: 40rem) {
+        font-size: 1rem;
+    }
 }
 
 .btn-operator {
@@ -53,8 +57,6 @@ body {
 }
 
 .btn-pressed {
-    // background: map-get($colors, lightblack);
-    // color: map-get($colors, lightgrey);
     border: 3px solid map-get($colors, red);
 }
 
@@ -68,6 +70,15 @@ body {
         }
     }
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @media (max-width: 40rem) {
+        grid: {
+            template: {
+                columns: 19.6rem;
+                rows: 4.9rem 14rem;
+            }
+        }
+    }
 }
 
 #calculator__display {
@@ -83,6 +94,11 @@ body {
     color: map-get($colors, white);
     font-family: "Roboto Mono", monospace;
     font-size: 2.5rem;
+
+    @media (max-width: 40rem) {
+        padding: 1rem;
+        font-size: 2rem;
+    }
 }
 
 #calculator__keys {
@@ -90,8 +106,8 @@ body {
     display: grid;
     grid: {
         template: {
-            columns: 7rem 7rem 7rem 7rem;
-            rows: 4rem 4rem 4rem 4rem 4rem;
+            columns: repeat(4, 1fr);
+            rows: repeat(5, 1fr);
             areas: "add subtract multiply divide"
                 "number__7 number__8 number__9 calculate"
                 "number__4 number__5 number__6 calculate"
@@ -167,6 +183,6 @@ body {
 
 #calculate {
     grid-area: calculate;
-    background: map-get($colors, orange);
+    background: map-get($colors, lime);
     color: map-get($colors, black);
 }

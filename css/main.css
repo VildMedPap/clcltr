@@ -45,6 +45,11 @@ body {
 .btn:focus {
   outline: 0;
 }
+@media (max-width: 40rem) {
+  .btn {
+    font-size: 1rem;
+  }
+}
 
 .btn-operator {
   background: #d2d2d2;
@@ -67,6 +72,12 @@ body {
   grid-template-areas: "display" "keys";
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+@media (max-width: 40rem) {
+  #calculator {
+    grid-template-columns: 19.6rem;
+    grid-template-rows: 4.9rem 14rem;
+  }
+}
 
 #calculator__display {
   grid-area: display;
@@ -82,12 +93,18 @@ body {
   font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
 }
+@media (max-width: 40rem) {
+  #calculator__display {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
 
 #calculator__keys {
   grid-area: keys;
   display: grid;
-  grid-template-columns: 7rem 7rem 7rem 7rem;
-  grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas: "add subtract multiply divide" "number__7 number__8 number__9 calculate" "number__4 number__5 number__6 calculate" "number__1 number__2 number__3 calculate" "number__0 decimal clear calculate";
 }
 
@@ -157,7 +174,7 @@ body {
 
 #calculate {
   grid-area: calculate;
-  background: #f8971a;
+  background: #a8e063;
   color: #141414;
 }
 
