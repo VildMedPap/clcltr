@@ -1,5 +1,7 @@
 # clcltr
 
+Try out my calculator [HERE](https://vildmedpap.github.io/clcltr/).
+
 ## Description
 
 A super simple calculator which has the basic operators: adding, subtracting, multiplying and dividing. Also fit for smartphones.
