@@ -1,6 +1,6 @@
 # clcltr
 
-Try out my calculator [HERE](https://vildmedpap.github.io/clcltr/).
+Try out the calculator [HERE](https://vildmedpap.github.io/clcltr/).
 
 ## Description
 
