@@ -12,6 +12,6 @@ A super simple calculator which has the basic operators: adding, subtracting, mu
 
 Purely frontend objectives:
 
--   HTML: _dataset_
--   CSS: _Sass_, _grid_, _responsiveness_
--   JavaScript: _refactoring_, _ternary operator_
+-   **HTML**: _dataset_
+-   **CSS**: _Sass mixins_, _positioning with grid_, _responsiveness_
+-   **JavaScript**: _refactoring_, _ternary operator_, _click event listener_
